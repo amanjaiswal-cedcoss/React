@@ -4,10 +4,15 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const arrCities=["Lucknow","Agra","New Delhi","Jaipur","Mumbai","Pune","Bangalore","Shimla"]
-arrCities.sort();
+const arrCities=["Lucknow","Agra","New Delhi","Jaipur","Mumbai","Pune","Bangalore","Shimla","Buxwaha","Bokaro"];
+let arrCitiesB=[];
+for(let i=0;i<arrCities.length;i++){
+  if(arrCities[i].charAt(0)=="B"){
+    arrCitiesB.push(arrCities[i])
+  }
+}
 const element=(<ul>
-  {arrCities.map(item => {
+  {arrCitiesB.map(item => {
     return (
       <li>
         {item} 
