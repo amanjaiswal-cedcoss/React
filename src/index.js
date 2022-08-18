@@ -4,36 +4,15 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-let i,j,flag,arrPrime=[];
-const prime=()=>{
-  for(i=1;i<=100;i++){
-    flag=0;
-    for(j=2;j<i;j++){
-    if(i%j===0){
-      flag=1;
-    }
-    }
-    if(flag===0){
-      arrPrime.push(i);
-    }
+let fact=1,i;
+const factorial=(num)=>{
+  for(i=1;i<=num;i++){
+    fact*=i;
   }
-  for(i=0;i<arrPrime.length;i++){
-  
-  }
-  
+  return fact;
 }
-
-prime();
-const element=(<ul>
-  {arrPrime.map(item => {
-    return (
-      <li>
-        {item} 
-      </li>
-    )
-  })}
-</ul>);
-root.render(element)
+let element=factorial(6);
+root.render(<h1>{element}</h1>)
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
