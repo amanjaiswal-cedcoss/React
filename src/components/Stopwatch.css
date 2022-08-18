@@ -1,0 +1,20 @@
+#stopwatch{
+    font-size: 80px;
+    display: flex;
+    width: 50%;
+    height: 100px;
+    border: 2px solid #1b398b;
+    border-style: dashed;
+    margin: 1% 25%;
+    align-items: center;
+    justify-content: center;
+}
+#stopwatchBtn{
+    text-align: center;
+}
+#btnStopwatch{
+    border: 1px solid white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+} 
