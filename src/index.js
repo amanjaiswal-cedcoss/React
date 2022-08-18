@@ -4,15 +4,18 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-let fact=1,i;
-const factorial=(num)=>{
-  for(i=1;i<=num;i++){
-    fact*=i;
-  }
-  return fact;
-}
-let element=factorial(6);
-root.render(<h1>{element}</h1>)
+const arrCities=["Lucknow","Agra","New Delhi","Jaipur","Mumbai","Pune","Bangalore","Shimla"]
+arrCities.sort();
+const element=(<ul>
+  {arrCities.map(item => {
+    return (
+      <li>
+        {item} 
+      </li>
+    )
+  })}
+</ul>);
+root.render(element)
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
