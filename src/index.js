@@ -4,15 +4,24 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const arrCities=["Lucknow","Agra","New Delhi","Jaipur","Mumbai","Pune","Bangalore","Shimla","Buxwaha","Bokaro"];
-let arrCitiesB=[];
-for(let i=0;i<arrCities.length;i++){
-  if(arrCities[i].charAt(0)=="B"){
-    arrCitiesB.push(arrCities[i])
-  }
+let i,j,flag,arrPrime=[];
+const prime=()=>{
+  for(i=1;i<=100;i++){
+    flag=0;
+    for(j=2;j<i;j++){
+    if(i%j===0){
+      flag=1;
+    }
+    }
+    if(flag===0){
+      arrPrime.push(i);
+    }
+  }  
 }
+
+prime();
 const element=(<ul>
-  {arrCitiesB.map(item => {
+  {arrPrime.map(item => {
     return (
       <li>
         {item} 
